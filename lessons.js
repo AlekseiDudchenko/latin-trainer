@@ -1,5 +1,58 @@
-const lessons=[
-    {title:'Приветствия',icon:'👋',caption:'Первые слова',intro:'Как поздороваться и попрощаться по-латыни?',words:[['Salve','Здравствуй'],['Vale','До свидания'],['Gratias','Спасибо'],['Amicus','Друг']],questions:[{word:'Salve',options:['Здравствуй','До свидания','Спасибо','Друг'],answer:0},{word:'Gratias',options:['Пожалуйста','Друг','Спасибо','Школа'],answer:2},{word:'Vale',options:['До свидания','Здравствуй','Книга','Учитель'],answer:0},{word:'Amicus',options:['Ученик','Число','Друг','Дом'],answer:2}]},
-    {title:'Числа',icon:'Ⅲ',caption:'От одного до четырёх',intro:'Сколько это? Узнай латинские числа.',words:[['Unus','Один'],['Duo','Два'],['Tres','Три'],['Quattuor','Четыре']],questions:[{word:'Unus',options:['Один','Два','Три','Четыре'],answer:0},{word:'Tres',options:['Четыре','Один','Три','Два'],answer:2},{word:'Duo',options:['Три','Два','Один','Четыре'],answer:1},{word:'Quattuor',options:['Два','Три','Один','Четыре'],answer:3}]},
-    {title:'В школе',icon:'📖',caption:'Знакомые вещи',intro:'В школе тоже можно встретить латинские слова.',words:[['Schola','Школа'],['Liber','Книга'],['Magister','Учитель'],['Discipulus','Ученик']],questions:[{word:'Liber',options:['Школа','Учитель','Книга','Ученик'],answer:2},{word:'Schola',options:['Книга','Школа','Друг','Число'],answer:1},{word:'Magister',options:['Ученик','Учитель','Школа','Книга'],answer:1},{word:'Discipulus',options:['Друг','Книга','Учитель','Ученик'],answer:3}]}
-  ];
+// Добавляйте новые уроки и вопросы здесь.
+// answer — номер правильного варианта в options, начиная с 0.
+const lessons = [
+  {
+    title: 'Приветствия',
+    icon: '👋',
+    caption: 'Первые слова',
+    intro: 'Как поздороваться и попрощаться по-латыни?',
+    words: [
+      ['Salve', 'Здравствуй'],
+      ['Vale', 'До свидания'],
+      ['Gratias', 'Спасибо'],
+      ['Amicus', 'Друг'],
+    ],
+    questions: [
+      { word: 'Salve', options: ['Здравствуй', 'До свидания', 'Спасибо', 'Друг'], answer: 0 },
+      { word: 'Gratias', options: ['Пожалуйста', 'Друг', 'Спасибо', 'Школа'], answer: 2 },
+      { word: 'Vale', options: ['До свидания', 'Здравствуй', 'Книга', 'Учитель'], answer: 0 },
+      { word: 'Amicus', options: ['Ученик', 'Число', 'Друг', 'Дом'], answer: 2 },
+    ],
+  },
+  {
+    title: 'Числа',
+    icon: 'Ⅲ',
+    caption: 'От одного до четырёх',
+    intro: 'Сколько это? Узнай латинские числа.',
+    words: [
+      ['Unus', 'Один'],
+      ['Duo', 'Два'],
+      ['Tres', 'Три'],
+      ['Quattuor', 'Четыре'],
+    ],
+    questions: [
+      { word: 'Unus', options: ['Один', 'Два', 'Три', 'Четыре'], answer: 0 },
+      { word: 'Tres', options: ['Четыре', 'Один', 'Три', 'Два'], answer: 2 },
+      { word: 'Duo', options: ['Три', 'Два', 'Один', 'Четыре'], answer: 1 },
+      { word: 'Quattuor', options: ['Два', 'Три', 'Один', 'Четыре'], answer: 3 },
+    ],
+  },
+  {
+    title: 'В школе',
+    icon: '📖',
+    caption: 'Знакомые вещи',
+    intro: 'В школе тоже можно встретить латинские слова.',
+    words: [
+      ['Schola', 'Школа'],
+      ['Liber', 'Книга'],
+      ['Magister', 'Учитель'],
+      ['Discipulus', 'Ученик'],
+    ],
+    questions: [
+      { word: 'Liber', options: ['Школа', 'Учитель', 'Книга', 'Ученик'], answer: 2 },
+      { word: 'Schola', options: ['Книга', 'Школа', 'Друг', 'Число'], answer: 1 },
+      { word: 'Magister', options: ['Ученик', 'Учитель', 'Школа', 'Книга'], answer: 1 },
+      { word: 'Discipulus', options: ['Друг', 'Книга', 'Учитель', 'Ученик'], answer: 3 },
+    ],
+  },
+];
