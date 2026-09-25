@@ -1,5 +1,8 @@
 const state={lesson:0,tab:'practice',question:0,selected:null,answered:false,score:0,stars:0,completed:new Set(),flipped:new Set(),finished:false};
   const lessonsEl=document.getElementById('lessons'),body=document.getElementById('stageBody'),progress=document.getElementById('stageProgress');
+  const lessonCount=lessons.length;
+  const lessonWord=lessonCount%10===1&&lessonCount%100!==11?'урок':lessonCount%10>=2&&lessonCount%10<=4&&(lessonCount%100<12||lessonCount%100>14)?'урока':'уроков';
+  document.getElementById('lessonCount').textContent=`${lessonCount} ${lessonWord}`;
   const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function renderLessons(){lessonsEl.innerHTML=lessons.map((l,i)=>`<button class="lesson ${state.lesson===i?'active':''}" data-lesson="${i}" aria-current="${state.lesson===i?'step':'false'}"><span class="lesson-icon" aria-hidden="true">${l.icon}</span><span><b>${l.title}</b><small>${l.caption}</small></span>${state.completed.has(i)?'<span class="done" aria-label="Пройдено">✓</span>':''}</button>`).join('');document.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>selectLesson(Number(b.dataset.lesson)))}
   function selectLesson(i){state.lesson=i;state.tab='practice';state.question=0;state.selected=null;state.answered=false;state.score=0;state.finished=false;state.flipped.clear();render()}
